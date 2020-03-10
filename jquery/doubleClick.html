@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 class="hide1">If you double-click on me. I will disapper</h2>
+    <h2 class="hide2">Click me away!</h2>
+    <h2 class="hide2">Click me too!!</h2>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      $(".hide2").click(function() {
+        // hide에 시간도 들어올수 있다
+        $(this).hide(2050);
+      });
+      $(".hide1").dblclick(function() {
+        $(this).hide();
+      });
+    </script>
+  </body>
+</html>

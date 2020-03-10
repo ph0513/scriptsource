@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="replace()">이동하기</button>
+    <script>
+      function replace() {
+        // location.replace("http://www.naver.com"); /* 새페이지를 리플레이스 시킨다 뒤로가기 없음 */
+        location.href =
+          "http://www.naver.com"; /* 뒤로 가기 가능 히스토리에 남김 */
+      }
+    </script>
+  </body>
+</html>

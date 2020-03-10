@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 함수적 선언
+      function callTenTimesa(callback) {
+        for (let i = 0; i < 10; i++) {
+          callback();
+        }
+      }
+      // 익명함수
+      const callback = function() {
+        alert("함수호출");
+      };
+      // 함수 호출
+      callTenTimesa(callback); // callback 은 익명함수를 부른것이다 함수 자체를 인자로 넘겼다
+    </script>
+  </body>
+</html>

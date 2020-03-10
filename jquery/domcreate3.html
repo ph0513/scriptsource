@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    // 문서가 로드(window.onload)되면 body 안에 ul li 태그를 생성한 후 문자 넣기
+    window.onload = function() {
+      // 익명함수
+      // 태그 생성하기
+      let output = "<ul>";
+      output += "<li>JAVASCRIPT</li>";
+      output += "<li>CSS</li>";
+      output += "<li>JQUERY</li>";
+      output += "</ul>";
+      // document.body.append(output); // 이렇게 하면 문자열로 나온다
+      // document.body.innerText = output; // append 랑 똑같다
+      // document.body.innerHTML = output;
+      $("body").html(output); // document.body.innerHTML = output; 대체
+    };
+
+    // 이렇게 하면 요소가 반영이 된다
+  </script>
+</html>

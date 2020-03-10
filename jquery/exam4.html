@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="">이름</label>
+        <input type="text" name="username" />
+      </div>
+      <div>
+        <label for="">아이디</label>
+        <input type="text" name="userid" />
+      </div>
+      <div>
+        <!-- submit(기본) reset botton -->
+        <button type="button" onclick="send()">보내기</button>
+        <!-- 이벤트 onclick 마우스로 하는 행위-->
+      </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      function send() {
+        // let input = document.querySelectorAll("input");
+        let input = $("input");
+
+        console.log(input.val()); // <input type="text" name="username"> 가장 처음에 있는 인풋태그를 가져옴
+        if (input[0].val() === "") {
+          alert("이름이 비어있습니다.");
+          input[0].focus(); // 경고창 후에 커서로 간다
+          return; // 이렇게 하면 커서로 간다
+        } /* else alert(input[0].value); */
+        if (input[1].val() === "") {
+          alert("비밀번호를 입력해 주세요.");
+          input[1].focus(); // 경고창 후에 커서로 간다
+          return;
+        } /* else alert(input[1].value); */
+
+        // form 안의 내용이 다 작성이 되었다면
+        // submit()하기
+        // let form = document.querySelector("form");
+        let form = $("form");
+
+        form.submit(); // 이걸 위에서 submit 을 button 으로 바꿨기 때문에 설정해야한다
+
+        // let inputId = document.querySelector("[name='userid']");
+        // console.log(inputId.value);
+        // if (inputId.value === "") {
+        //   alert("비밀번호를 입력해 주세요");
+        //   inputId.focus(); // 경고창 후에 커서로 간다
+        // } else alert(inputId.value);
+      }
+    </script>
+  </body>
+</html>

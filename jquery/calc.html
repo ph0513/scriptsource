@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>사칙연산 계산기</h1>
+    </div>
+    <div>
+      <input type="text" name="num1" id="num1" />
+      <select name="op" id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+      </select>
+      <input
+        type="text"
+        name="num2"
+        id="num2"
+      /><!-- value 를 넣으면 초기값이 들어감(text에서) -->
+      <input type="button" value="계산" onclick="fourRules()" />
+    </div>
+    <div>
+      <input type="text" name="resultVal" id="resultVal" readonly />
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      function fourRules() {
+        // 계산버튼을 클릭하면 사용자가 입력한 숫자 가져오기
+        let num1 = Number(
+          // document.getElementById("num1").value
+          $("#num1").val()
+        ); /* 이렇게 하면 type="text" name="num1" id="num1" 이걸 가져옴 */
+        let num2 = Number(
+          // document.getElementById("num2").value
+          $("#num2").val()
+        ); /* .value 이렇게 해야 값을 가져옴 가져온 숫자이니까 Number로 int 값으로 변환 */
+        // let op = document.getElementById("op").value;
+        let op = $("#op").val();
+        console.log(num1);
+        console.log(num1);
+        console.log(num2);
+        console.log(op);
+        let result; //이건 안해도 나옴.. 초기화
+        switch (op) {
+          case "+":
+            result = num1 + num2;
+            break;
+          case "-":
+            result = num1 - num2;
+            break;
+          case "*":
+            result = num1 * num2;
+            break;
+          default:
+            result = num1 / num2;
+            break;
+        }
+        // document.getElementById("result").value = 13; // result 의 값은 리절트다,이렇게 써도 된다, 값 고정 13
+        // document.getElementById("resultVal").value = result; // result 의 값은 리절트다,이렇게 써도 된다
+        console.log(val(resultVal));
+        // $("#resultVal").val(result) = result; // 이거 아님
+        $("#resultVal").val(result); // 이거 아님
+      }
+    </script>
+  </body>
+</html>

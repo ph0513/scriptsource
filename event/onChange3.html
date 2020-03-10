@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="gender">성별</label>
+        <input
+          type="radio"
+          name="gender"
+          id="male"
+          value="남"
+          onchange="gender_select()"
+        />
+        <label for="male">남</label>
+        <input
+          type="radio"
+          name="gender"
+          id="female"
+          value="여"
+          onchange="gender_select()"
+        />
+        <!-- name 을 동일하게 설정해야 항목의 여러개중 선택 가능  -->
+        <label for="female">여</label>
+      </div>
+    </form>
+    <script>
+      function gender_select() {
+        let gender = document.querySelector(
+          "[name='gender']:checked"
+        ); /* "[name='gender']:checked" 선택한걸 가져옴 */
+        console.log(gender.value);
+        alert(gender.value);
+      }
+    </script>
+  </body>
+</html>

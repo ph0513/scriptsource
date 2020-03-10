@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- window.open(URL,name,spec,replace)
+        URL : 외부주소, 내부주소
+        name : _blank, _parent, _self, _top
+        spec : 크기지정, 사이즈조절 가능여부 , 스크롤바 여부...
+        replace : history list 보관 여부
+    -->
+    <button type="button" onclick="window.open('http://www.naver.com')">
+      새창열기
+    </button>
+    <p></p>
+    <button
+      type="button"
+      onclick="window.open('../loop/for1.html','_blank','width=300,hight=300')"
+    >
+      <!-- 주소가 안불러와 져서 주소를 쳤다 -->
+      새창열기
+    </button>
+  </body>
+</html>
